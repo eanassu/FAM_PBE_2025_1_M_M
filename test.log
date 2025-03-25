@@ -11,3 +11,4 @@ INSERT INTO ALUNOS VALUES(111,'abc','2002-07-01',3333.00)
 COMMIT
 /*C6*/SET SCHEMA PUBLIC
 create table Funcionarios(\u000a  re int,\u000a  nome varchar(50),\u000a  dataAdmissao date,\u000a  salario decimal(15,2),\u000a  primary key(re))
+/*C5*/DISCONNECT
