@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Cadastro de Funcionário</title>
+</head>
+<body>
+<form action="#" th:action="@{/funcionarios}" th:object="${funcionario}"
+  method="post">
+RA:<input type="text" th:field="*{re}"/><br/>
+nome:<input type="text" th:field="*{nome}"/><br/>
+data de admissão:
+  <input type="text" th:field="*{dataAdmissao}"/><br/>
+salário:<input type="text" th:field="*{salario}"/><br/>
+<input type="submit" value="enviar"/>
+</form>
+<a href="/funcionarios">funcionários</a>
+</body>
+</html>
