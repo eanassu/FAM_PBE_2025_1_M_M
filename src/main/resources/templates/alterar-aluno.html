@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Alteração de Aluno</title>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	var dateField = document.getElementById('dataNascimento');
+	var currentDate = dateField.value;
+	if ( currentDate ) {
+		var dateParts = currentDate.split('-');
+		var formattedDate = dateParts[2]+'/'+dateParts[1]+'/'+dateParts[0];
+	}
+	dateField.value = formattedDate;
+});
+
+</script>
+
+</head>
+<body>
+<form action="#" th:action="@{/alunos/update}" th:object="${aluno}"
+  method="post">
+RA:<input type="text" th:field="*{ra}"/><br/>
+nome:<input type="text" th:field="*{nome}"/><br/>
+data de nascimento:
+  <input type="text" th:field="*{dataNascimento}" id='dataNascimento'/><br/>
+renda:<input type="text" th:field="*{renda}"/><br/>
+<input type="submit" value="enviar"/>
+</form>
+<a href="/alunos">alunos</a>
+</body>
+</html>
