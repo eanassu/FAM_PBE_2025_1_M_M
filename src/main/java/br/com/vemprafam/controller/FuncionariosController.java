@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.vemprafam.dao.DaoFuncionario;
-import br.com.vemprafam.pojo.Aluno;
 import br.com.vemprafam.pojo.Funcionario;
 
 @Controller
